@@ -6,6 +6,8 @@ let HEIGHT = window.innerHeight;
 
 let MBox = new Box(WIDTH/2, HEIGHT/2);
 
+let x = 500, y = 300;
+
 let velocityX = 5;
 let velocityY = 5;
 //functions
@@ -15,24 +17,18 @@ function clear(){
 }
 
 function update(){
-    MBox.x += velocityX;
-    MBox.y += velocityY;
-    if (MBox.x >= WIDTH)
-      velocityX = -velocityX;
-    if (MBox.y >= HEIGHT)
-      velocityX = -velocityY;
+    x += velocityX;
+    y += velocityY;
+
 }
 
 function show(){
-  ctx.fillStyle = "black";
-  ctx.fillRect(MBox.x, MBox.y, 50, 50);
+  ctx.fillStyle = "green";
+  ctx.fillRect(x, y, 50, 50);
 }
 
-function loop(){
-  let timer = setinterval(()=>{
+let timer = setInterval(()=>{
     clear();
     update();
     show();
-  }, 16);
-}
-loop();
+  }, 100);
