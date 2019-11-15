@@ -29,10 +29,10 @@ function show(){
 }
 
 function loop(){
-  while(true){
+  let timer = setinterval(()=>{
     clear();
     update();
     show();
-  }
+  }, 16);
 }
 loop();
