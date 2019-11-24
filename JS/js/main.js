@@ -11,10 +11,10 @@ let HEIGHT = window.innerHeight;
 
 //theory
 
-let frx  = 1,
-    fry  = 1,
+let Force = {x:1,y:1},
     ax = 0,
-    ay = 1;
+    ay = 1,
+    Velocity = {x:0, y:0};
 /*
 
     Сила = масса * ускорение -> ускорение = сила / масса
@@ -34,23 +34,18 @@ function clear(){
 }
 
 function update(){
-
-  dx += frx / mass
-  dy += fry / mass
-  // if(x + dx > canvas.width - radius || x + dx < radius)
-  //   dx = - k * dx;
-  // if(y + dy > canvas.height - radius || y + dy < radius)
-  //   dy = - k * dy;
-
     if(x + dx > canvas.width-radius || x + dx < radius)
     dx = -dx;
-
     if(y + dy > canvas.height-radius || y + dy < radius)
     dy = -dy
 
 
+    Velocity  = ForceToVel(Force);
+    dx = Velocity.x;
+    dy = Velocity.y;
+
     x += dx
-    y += dy
+    y += dy;
 }
 
 function show(){
@@ -65,3 +60,13 @@ setInterval(function () {
   update();
   show();
 }, 20);
+
+function ForceToVel(Force, mass) {
+        ForceX = Force.x;
+        ForceY = Force.y;
+
+        Velocity.x = ForceX / mass;
+        Velocity.y = ForceY / mass;
+
+        return Velocity;
+      }
