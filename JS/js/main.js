@@ -2,9 +2,7 @@ let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext("2d");
 let x = 50, y = 110;
 
-let dx = 6,
-    dy = 9,
-    mass = 1,
+let mass = 1,
     radius = 40,
     k = 1; // px \ frame
 
