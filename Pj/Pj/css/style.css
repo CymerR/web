@@ -1,0 +1,57 @@
+
+body {
+	background-color:#071c0f;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+
+#canvas {
+	display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ul {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0;
+	padding: 0;
+	display: flex;
+
+}
+ul li {
+	list-style: none;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	margin: 0 50px;
+	background: rgba(255, 255, 255, .2);
+	border-radius: 50%;
+	color: #16062b;
+	transition: .7s;
+}
+ul li:hover {
+	background: #fff;
+	box-shadow: 0 0 60px 30px #fff;
+}*/
