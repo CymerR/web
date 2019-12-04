@@ -1,16 +1,43 @@
 
 body {
-	background-color:#071c0f;
+	background-color: darkolivegreen;
 	margin: 0;
 	padding: 0;
 }
 
 
+header {
+	width: 100vw;
+	height: 80px;
+	background: antiquewhite;
+	z-index: 1;
+}
 
+header input{
+	margin: 5px;
+}
+#gravity {
+	background-color: brown;
+	width: 30vw;
+	transition: .3s;
+}
 
+#checkbox {
+	padding: 10px;
+	width: 50px;
+	height: 50px;
+	color: chocolate;
+	transition: .3s;
+
+}
+
+#checkbox:hover {
+		box-shadow: 0 0 100px #00d2ff;
+}
 
 #canvas {
 	display: block;
+	z-index: 2;
 }
 
 
